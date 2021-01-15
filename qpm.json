@@ -4,14 +4,14 @@
   "info": {
     "name": "NoHealthAndSafety",
     "id": "no-health-and-safety",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "url": null,
     "additionalData": {}
   },
   "dependencies": [
     {
       "id": "beatsaber-hook",
-      "versionRange": "^0.8.4",
+      "versionRange": "*",
       "additionalData": {
         "extraFiles": [
           "src/inline-hook"

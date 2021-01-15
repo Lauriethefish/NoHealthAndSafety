@@ -15,9 +15,9 @@ Configuration& getConfig() {
 }
 
 // Returns a logger, useful for printing debug messages
-const Logger& getLogger() {
-    static const Logger logger(modInfo);
-    return logger;
+Logger& getLogger() {
+    static Logger* logger = new Logger(modInfo);
+    return *logger;
 }
 
 // Move to the next scene upon health and safety loading
@@ -43,6 +43,6 @@ extern "C" void load() {
     getLogger().info("Installing hooks...");
 
     // Install our hooks
-    INSTALL_HOOK_OFFSETLESS(HealthWarningFlowCoordinator_DidActivate, il2cpp_utils::FindMethodUnsafe("", "HealthWarningFlowCoordinator", "DidActivate", 3));
+    INSTALL_HOOK_OFFSETLESS(getLogger(), HealthWarningFlowCoordinator_DidActivate, il2cpp_utils::FindMethodUnsafe("", "HealthWarningFlowCoordinator", "DidActivate", 3));
     getLogger().info("Installed all hooks!");
 }
