@@ -7,7 +7,7 @@
     "Removes the annoying health and safety pop-up after starting the game."
   ],
   "category": "Gameplay",
-  "gameVersion": "1.13.0",
+  "gameVersion": "1.13.2",
   "platform": "Quest",
   "components": [
     {
@@ -17,18 +17,6 @@
       },
       "uninstallAction": {
         "removeLibraryFile": "libno-health-and-safety.so"
-      }
-    },
-    {
-      "type": "HookModLibrary",
-      "installAction": {
-        "installLibraryFile": "libbeatsaber-hook_1_0_9.so"
-      }
-    },
-    {
-      "type": "HookModLibrary",
-      "installAction": {
-        "installLibraryFile": "libcodegen_0_5_3.so"
       }
     }
   ]
