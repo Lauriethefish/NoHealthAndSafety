@@ -4,7 +4,8 @@
       "defines": [
         "VERSION=\"0.1.1\"",
         "__GNUC__",
-        "__aarch64__"
+        "__aarch64__",
+        "ID=\"no-health-and-safety\""
       ],
       "includePath": [
         "${workspaceFolder}/**",
